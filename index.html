@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche d'animation professionnelle | La Boucle - Mythère du Marais</title>
+  <style>
+	:root {
+  	--primary: #4ECDC4;
+  	--secondary: #FF6B6B;
+  	--accent: #FFE66D;
+  	--dark: #292F36;
+  	--light: #F7FFF7;
+	}
+	body {
+  	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  	line-height: 1.6;
+  	color: #333;
+  	background-color: #f9f9f9;
+  	margin: 0;
+  	padding: 20px;
+	}
+	.container {
+  	max-width: 1000px;
+  	margin: 0 auto;
+  	background: white;
+  	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  	border-radius: 10px;
+  	overflow: hidden;
+	}
+	h1 {
+  	background: linear-gradient(135deg, var(--primary), #3aa89e);
+  	color: white;
+  	padding: 25px;
+  	margin: 0;
+  	font-size: 1.8em;
+  	text-align: center;
+	}
+	h2 {
+  	color: var(--primary);
+  	border-bottom: 2px solid var(--primary);
+  	padding-bottom: 8px;
+  	margin-top: 30px;
+  	font-size: 1.4em;
+	}
+	h3 {
+  	color: var(--dark);
+  	margin-top: 20px;
+  	font-size: 1.2em;
+	}
+	.section {
+  	padding: 20px 30px;
+  	border-bottom: 1px solid #eee;
+	}
+	.row {
+  	display: flex;
+  	gap: 20px;
+  	margin-bottom: 15px;
+	}
+	label {
+  	display: block;
+  	margin-bottom: 5px;
+  	font-weight: 600;
+  	color: var(--dark);
+	}
+	input, textarea, select {
+  	width: 100%;
+  	padding: 10px;
+  	border: 1px solid #ddd;
+  	border-radius: 5px;
+  	font-family: inherit;
+  	margin-bottom: 15px;
+	}
+	textarea {
+  	min-height: 80px;
+  	resize: vertical;
+	}
+	input[readonly], textarea[readonly] {
+  	background-color: #f5f5f5;
+	}
+	.checkbox-container {
+  	display: flex;
+  	align-items: center;
+  	margin-right: 20px;
+	}
+	.materiel-list {
+  	display: grid;
+  	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  	gap: 10px;
+  	margin-bottom: 20px;
+	}
+	.materiel-item {
+  	background: #f0f8ff;
+  	padding: 10px;
+  	border-radius: 5px;
+  	border-left: 4px solid var(--primary);
+	}
+	.timeline {
+  	position: relative;
+  	padding-left: 30px;
+  	margin-top: 20px;
+	}
+	.timeline:before {
+  	content: '';
+  	position: absolute;
+  	left: 10px;
+  	top: 0;
+  	bottom: 0;
+  	width: 2px;
+  	background: var(--primary);
+	}
+	.timeline-item {
+  	position: relative;
+  	margin-bottom: 30px;
+	}
+	.timeline-time {
+  	position: absolute;
+  	left: -30px;
+  	top: 0;
+  	background: var(--primary);
+  	color: white;
+  	padding: 3px 8px;
+  	border-radius: 15px;
+  	font-size: 0.8em;
+	}
+	.activity-step {
+  	background: white;
+  	padding: 15px;
+  	border-radius: 8px;
+  	box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  	margin-top: 10px;
+	}
+	.activity-step ul {
+  	padding-left: 20px;
+	}
+	.activity-step li {
+  	margin-bottom: 8px;
+	}
+	.role-card {
+  	background: #f9f9f9;
+  	padding: 15px;
+  	border-radius: 8px;
+  	margin-bottom: 15px;
+  	border-left: 4px solid var(--secondary);
+	}
+	.important-note {
+  	background: #fff9e6;
+  	padding: 15px;
+  	border-radius: 8px;
+  	border-left: 4px solid var(--accent);
+  	margin-bottom: 20px;
+	}
+	.tag {
+  	display: inline-block;
+  	padding: 4px 12px;
+  	border-radius: 20px;
+  	font-size: 0.8em;
+  	margin-right: 8px;
+  	margin-bottom: 8px;
+	}
+	.pedagogie-box {
+  	background: #e8f4f8;
+  	padding: 15px;
+  	border-radius: 8px;
+  	margin: 15px 0;
+	}
+  </style>
+</head>
+<body>
+  <div class="container">
+	<h1>FICHE D'ANIMATION PÉDAGOGIQUE<br>La Boucle : Mythère du Marais</h1>
+    
+	<form>
+  	<!-- 1. En-tête -->
+  	<div class="section" style="background-color: rgba(255, 230, 109, 0.1);">
+    	<div class="row">
+      	<div style="flex: 2;">
+        	<label for="titre">Titre officiel :</label>
+        	<input type="text" id="titre" name="titre" value="La Boucle : Enquête sensorielle dans les marais de Pontaillac" readonly>
+      	</div>
+      	<div>
+        	<label for="type">Catégorie :</label>
+        	<select id="type" name="type">
+          	<option value="educative" selected>Animation Éducative Immersive</option>
+          	<option value="nature">Pédagogie Environnementale</option>
+          	<option value="sensorielle">Expérience Sensorielle</option>
+        	</select>
+      	</div>
+    	</div>
+   	 
+    	<label for="description">Concept pédagogique :</label>
+    	<textarea id="description" name="description">Parcours initiatique de 1h30 mêlant exploration scientifique et narration immersive. Par une approche pluridisciplinaire (écologie, histoire locale, développement durable), les participants résolvent une énigme environnementale en mobilisant leurs cinq sens, découvrant ainsi les interactions complexes entre activités humaines et écosystème maraîcher.</textarea>
+   	 
+    	<div style="margin-top: 15px;">
+      	<span class="tag" style="background-color: var(--primary); color: white;">Extérieur</span>
+      	<span class="tag" style="background-color: var(--secondary); color: white;">Tout public</span>
+      	<span class="tag" style="background-color: var(--accent); color: var(--dark);">Immersion</span>
+      	<span class="tag" style="background-color: #6b48ff; color: white;">ODD 15</span>
+      	<span class="tag" style="background-color: #4CAF50; color: white;">Éducation à l'environnement</span>
+    	</div>
+  	</div>
+
+  	<!-- 2. Cadre général -->
+  	<div class="section">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/1491/1491714.png" width="20"> Cadre d'intervention</h2>
+   	 
+    	<div class="row">
+      	<div>
+        	<label for="public">Public cible :</label>
+        	<input type="text" id="public" name="public" value="Familles (enfants 8+) et adultes - Groupes de 8 à 15 personnes" readonly>
+        	<small>Adaptable pour publics scolaires (cycle 3 à lycée)</small>
+      	</div>
+      	<div>
+        	<label for="duree">Temporalité :</label>
+        	<input type="text" id="duree" name="duree" value="1h30 (version standard) / 2h (approfondie)" readonly>
+      	</div>
+    	</div>
+   	 
+    	<label for="lieu">Parcours thématique :</label>
+    	<input type="text" id="lieu" name="lieu" value="Marais de Pontaillac à Rouen - Parcours circulaire de 1,8 km" readonly>
+   	 
+    	<label for="plan">Points d'intérêt pédagogique :</label>
+    	<textarea id="plan" name="plan">- Départ : Ancienne glacière (histoire des usages humains)
+- Station 1 : Zone de transition agriculture/nature (impact visuel)
+- Station 2 : Berge colonisée par des espèces invasives
+- Station 3 : Point d'observation des pratiques agricoles
+- Station 4 : Zone humide témoin (biodiversité préservée)
+- Final : Lac de Métairie (synthèse des observations)</textarea>
+  	</div>
+
+  	<!-- 3. Objectifs détaillés -->
+  	<div class="section" style="background-color: rgba(78, 205, 196, 0.08);">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/3281/3281289.png" width="20"> Objectifs pédagogiques</h2>
+   	 
+    	<div class="pedagogie-box">
+      	<h3>Compétences du XXIe siècle développées :</h3>
+      	<div class="row">
+        	<div class="checkbox-container">
+          	<input type="checkbox" id="competence1" name="competence1" checked>
+          	<label for="competence1">Pensée systémique</label>
+        	</div>
+        	<div class="checkbox-container">
+          	<input type="checkbox" id="competence2" name="competence2" checked>
+          	<label for="competence2">Conscience environnementale</label>
+        	</div>
+        	<div class="checkbox-container">
+          	<input type="checkbox" id="competence3" name="competence3" checked>
+          	<label for="competence3">Collaboration</label>
+        	</div>
+      	</div>
+    	</div>
+   	 
+    	<h3>Objectifs cognitifs :</h3>
+    	<textarea id="objectifs-cognitifs" name="objectifs-cognitifs">- Comprendre le fonctionnement d'un écosystème maraîcher
+- Identifier au moins 3 impacts humains sur le milieu
+- Décrire le concept de "service écosystémique"
+- Nommer deux espèces invasives locales et leurs effets</textarea>
+   	 
+    	<h3>Objectifs affectifs :</h3>
+    	<textarea id="objectifs-affectifs" name="objectifs-affectifs">- Développer un sentiment d'appartenance au territoire
+- Éveiller la curiosité pour les questions environnementales
+- Renforcer la confiance dans l'exploration sensorielle
+- Créer un lien émotionnel avec le milieu naturel</textarea>
+   	 
+    	<h3>Liens avec les programmes :</h3>
+    	<div class="materiel-list">
+      	<div class="materiel-item">Socle commun (Domaine 4 : Systèmes naturels)</div>
+      	<div class="materiel-item">EDD (Objectifs de Développement Durable 15)</div>
+      	<div class="materiel-item">Géographie (Aménagement du territoire)</div>
+      	<div class="materiel-item">SVT (Écosystèmes et biodiversité)</div>
+    	</div>
+  	</div>
+
+  	<!-- 4. Dispositif pédagogique -->
+  	<div class="section">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" width="20"> Dispositif d'animation</h2>
+   	 
+    	<div class="important-note">
+      	<h3>Scénario pédagogique : "Le Journal Perdu du Gardien"</h3>
+      	<p>Le vieux Baptiste, gardien légendaire des marais, a disparu en laissant derrière lui des fragments de son journal contenant des observations cruciales sur l'équilibre fragile du marais. Les participants, guidés par ses notes énigmatiques, doivent reconstituer son message final en résolvant des énigmes sensorielles tout au long du parcours.</p>
+    	</div>
+   	 
+    	<h3>Méthodes mobilisées :</h3>
+    	<div class="row">
+      	<div class="materiel-item">Pédagogie active</div>
+      	<div class="materiel-item">Apprentissage expérientiel</div>
+      	<div class="materiel-item">Storytelling éducatif</div>
+      	<div class="materiel-item">Démarche d'investigation</div>
+    	</div>
+   	 
+    	<h3>Matériel pédagogique :</h3>
+    	<div class="materiel-list">
+      	<div class="materiel-item">Kit du petit explorateur (carte, boussole, loupe)</div>
+      	<div class="materiel-item">Échantillons sous cloche (plantes, sols, eau)</div>
+      	<div class="materiel-item">Enregistreur audio (ambiances sonores)</div>
+      	<div class="materiel-item">Fiches espèces plastifiées</div>
+      	<div class="materiel-item">Journal du gardien (fragments)</div>
+      	<div class="materiel-item">Matériel de mesure (pH, turbidité)</div>
+      	<div class="materiel-item">Lunettes d'observation longue portée</div>
+      	<div class="materiel-item">Kit de sécurité (trousse, sifflet, lampe)</div>
+    	</div>
+  	</div>
+
+  	<!-- 5. Déroulement détaillé -->
+  	<div class="section" style="background-color: rgba(255, 230, 109, 0.08);">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/3404/3404134.png" width="20"> Scénario d'animation</h2>
+   	 
+    	<div class="timeline">
+      	<!-- Étape 0 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">-15min</span>
+        	<h3>Préparation</h3>
+        	<div class="activity-step">
+          	<strong>Installation :</strong>
+          	<ul>
+            	<li>Vérification des stations sensorielles</li>
+            	<li>Positionnement des balises écologiques</li>
+            	<li>Préparation des kits participants</li>
+          	</ul>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 1 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">0-10'</span>
+        	<h3>Immersion narrative</h3>
+        	<div class="activity-step">
+          	<strong>Mise en situation :</strong>
+          	<p>"Bienvenue apprentis gardiens ! Baptiste a disparu, mais son dernier message dit : <em>'Seules les mains qui écoutent peuvent entendre la terre parler'</em>. Nous allons suivre sa boucle mystérieuse à travers 5 épreuves sensorielles."</p>
+         	 
+          	<strong>Rituel d'entrée :</strong>
+          	<ul>
+            	<li>Distribution des "badges de gardien" (autocollants)</li>
+            	<li>Consigne de silence pendant 1 minute pour écouter le marais</li>
+            	<li>Premier indice : morceau de carte avec tracé du parcours</li>
+          	</ul>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 2 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">10-25'</span>
+        	<h3>Station 1 - L'Œil du Gardien (Vue)</h3>
+        	<div class="activity-step">
+          	<strong>Activité principale :</strong>
+          	<ul>
+            	<li><strong>Observation panoramique :</strong> Comparaison paysages naturels/aménagés avec grille d'analyse</li>
+            	<li><strong>Jeu des différences :</strong> Repérer 5 modifications humaines (durée 8 minutes)</li>
+            	<li><strong>Énigme visuelle :</strong> Puzzle de photos aériennes (évolution 1950→2020)</li>
+          	</ul>
+         	 
+          	<strong>Message clé :</strong>
+          	<p>"Ce que l'œil voit, la main le transforme - chaque aménagement a un prix écologique"</p>
+         	 
+          	<strong>Transition :</strong>
+          	<p>Distribution du 2ème fragment de journal : <em>"Cherchez là où l'eau cache ce qui ne devrait pas être"</em></p>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 3 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">25-40'</span>
+        	<h3>Station 2 - Les Mains du Marais (Toucher)</h3>
+        	<div class="activity-step">
+          	<strong>Expérience tactile :</strong>
+          	<ul>
+            	<li><strong>Boîtes mystères :</strong> 6 échantillons à identifier (3 naturels, 3 polluants)</li>
+            	<li><strong>Jeu de rôle :</strong> "Si j'étais une plante invasive" (mimer la propagation)</li>
+            	<li><strong>Atelier pratique :</strong> Mesure de la texture du sol (argile vs sable)</li>
+          	</ul>
+         	 
+          	<strong>Données scientifiques :</strong>
+          	<p>Présentation de la Jussie (Ludwigia peploides) - 1 plante peut couvrir 10m² en 3 mois</p>
+         	 
+          	<strong>Transition :</strong>
+          	<p>Fragment de journal : <em>"L'air porte parfois ce que les yeux ne voient plus"</em></p>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 4 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">40-55'</span>
+        	<h3>Station 3 - Le Souffle Caché (Odorat)</h3>
+        	<div class="activity-step">
+          	<strong>Exploration olfactive :</strong>
+          	<ul>
+            	<li><strong>Sniff-test :</strong> 6 odeurs à classer (naturelles/polluantes)</li>
+            	<li><strong>Memory olfactif :</strong> Associer plantes locales à leurs odeurs</li>
+            	<li><strong>Expérience :</strong> Comparaison d'échantillons d'eau (propre/polluée)</li>
+          	</ul>
+         	 
+          	<strong>Point scientifique :</strong>
+          	<p>Explication des composés organiques volatils et de leur rôle dans l'écosystème</p>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 5 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">55-70'</span>
+        	<h3>Station 4 - Le Chuchotement des Eaux (Ouïe)</h3>
+        	<div class="activity-step">
+          	<strong>Écoute active :</strong>
+          	<ul>
+            	<li><strong>Cartographie sonore :</strong> Reporter les sons sur un plan (naturels/humains)</li>
+            	<li><strong>Devinettes :</strong> Identifier des sons enregistrés (espèces animales/machines)</li>
+            	<li><strong>Expérience :</strong> Écoute au stéthoscope (arbre, sol, eau)</li>
+          	</ul>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 6 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">70-85'</span>
+        	<h3>Station 5 - Le Secret des Racines (Goût)</h3>
+        	<div class="activity-step">
+          	<strong>Dégustation commentée :</strong>
+          	<ul>
+            	<li><strong>Comparaison :</strong> Miel local vs industriel (analyse sensorielle)</li>
+            	<li><strong>Jeu :</strong> "La chaîne du goût" (relier aliment à son origine)</li>
+            	<li><strong>Atelier :</strong> Plantation symbolique d'un arbuste local</li>
+          	</ul>
+        	</div>
+      	</div>
+     	 
+      	<!-- Étape 7 -->
+      	<div class="timeline-item">
+        	<span class="timeline-time">85-90'</span>
+        	<h3>Rituel de clôture</h3>
+        	<div class="activity-step">
+          	<strong>Synthèse collective :</strong>
+          	<ul>
+            	<li>Reconstitution du message final du journal</li>
+            	<li>Lecture solennelle : <em>"Le marais n'est pas à nous, nous sommes au marais. Chaque sens éveillé est un pas vers l'équilibre."</em></li>
+            	<li>Tour de parole : "Quel sera votre engagement de gardien ?"</li>
+            	<li>Remise des diplômes "Gardiens du Marais"</li>
+          	</ul>
+        	</div>
+      	</div>
+    	</div>
+  	</div>
+
+  	<!-- 6. Évaluation -->
+  	<div class="section">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/3176/3176272.png" width="20"> Évaluation & Suivi</h2>
+   	 
+    	<h3>Indicateurs de réussite :</h3>
+    	<textarea id="evaluation" name="evaluation">- Qualité des interactions pendant les activités (échelle d'engagement)
+- Exactitude des réponses aux énigmes clés (% de réussite)
+- Profondeur des échanges lors du débriefing (nombre d'interventions pertinentes)
+- Capacité à formuler des liens cause/effet (analyse des productions)
+- Évolution des représentations (avant/après via dessins ou mots-clés)</textarea>
+   	 
+    	<h3>Outils d'évaluation :</h3>
+    	<div class="materiel-list">
+      	<div class="materiel-item">Grille d'observation comportementale</div>
+      	<div class="materiel-item">Photolangage en fin de session</div>
+      	<div class="materiel-item">Questionnaire ludique (3 questions clés)</div>
+      	<div class="materiel-item">Carnet de bord des participants</div>
+    	</div>
+  	</div>
+
+  	<!-- 7. Annexes -->
+  	<div class="section" style="background-color: rgba(78, 205, 196, 0.05);">
+    	<h2><img src="https://cdn-icons-png.flaticon.com/512/752/752255.png" width="20"> Ressources complémentaires</h2>
+   	 
+    	<h3>Pour aller plus loin :</h3>
+    	<div class="materiel-list">
+      	<div class="materiel-item">Fiche espèces invasives locales</div>
+      	<div class="materiel-item">Chronologie des aménagements humains</div>
+      	<div class="materiel-item">Bibliographie jeunesse/adulte</div>
+      	<div class="materiel-item">Contacts associations locales</div>
+    	</div>
+   	 
+    	<h3>Variantes pédagogiques :</h3>
+    	<textarea id="variantes" name="variantes">- Version scolaire : Liens avec programmes SVT/Géographie
+- Version team-building : Accent sur la collaboration
+- Version nocturne : Exploration des sens en conditions crépusculaires
+- Version expert : Prélèvements et analyses scientifiques</textarea>
+  	</div>
+	</form>
+  </div>
+</body>
+</html>
