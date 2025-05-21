@@ -63,7 +63,7 @@
   	font-weight: 600;
   	color: var(--dark);
 	}
-	input, textarea, select {
+	input, textarea {
   	width: 100%;
   	padding: 10px;
   	border: 1px solid #ddd;
@@ -173,11 +173,7 @@
       	</div>
       	<div>
         	<label for="type">Catégorie :</label>
-        	<select id="type" name="type">
-          	<option value="educative" selected>Animation Éducative Immersive</option>
-          	<option value="nature">Exploration Environnementale</option>
-          	<option value="sensorielle">Découverte Sensorielle</option>
-        	</select>
+        	<input type="text" id="type" name="type" value="Animation Éducative Immersive" readonly>
       	</div>
     	</div>
    	 
@@ -255,14 +251,6 @@
 - Encourager la curiosité pour la biodiversité locale
 - Renforcer l'engagement pour la préservation des écosystèmes
 - Favoriser le respect des espaces naturels</textarea>
-   	 
-    	<h3>Liens avec les programmes :</h3>
-    	<div class="materiel-list">
-      	<div class="materiel-item">Socle commun (Domaine 4 : Systèmes naturels)</div>
-      	<div class="materiel-item">EDD (Objectifs de Développement Durable 14)</div>
-      	<div class="materiel-item">SVT (Biodiversité et écosystèmes)</div>
-      	<div class="materiel-item">Géographie (Littoral et aménagement)</div>
-    	</div>
   	</div>
 
   	<!-- 4. Dispositif pédagogique -->
@@ -272,14 +260,6 @@
     	<div class="important-note">
       	<h3>Scénario pédagogique : "Les Gardiens de la Côte"</h3>
       	<p>Les participants incarnent des "Gardiens de la Côte", chargés de déchiffrer les indices laissés dans un livret mystérieux pour comprendre l'équilibre entre la plage de Royan et le marais de Pontaillac. Chaque étape du parcours révèle un secret écologique à travers une exploration sensorielle.</p>
-    	</div>
-   	 
-    	<h3>Méthodes mobilisées :</h3>
-    	<div class="row">
-      	<div class="materiel-item">Pédagogie active</div>
-      	<div class="materiel-item">Exploration sensorielle</div>
-      	<div class="materiel-item">Narration immersive</div>
-      	<div class="materiel-item">Observation guidée</div>
     	</div>
    	 
     	<h3>Matériel pédagogique :</h3>
@@ -452,25 +432,6 @@
       	<div class="materiel-item">Questionnaire rapide (3 questions)</div>
       	<div class="materiel-item">Dessins ou mots-clés collectés</div>
     	</div>
-  	</div>
-
-  	<!-- 7. Annexes -->
-  	<div class="section" style="background-color: rgba(78, 205, 196, 0.05);">
-    	<h2><img src="https://cdn-icons-png.flaticon.com/512/752/752255.png" width="20"> Ressources complémentaires</h2>
-   	 
-    	<h3>Pour aller plus loin :</h3>
-    	<div class="materiel-list">
-      	<div class="materiel-item">Guide des espèces locales (plantes et oiseaux)</div>
-      	<div class="materiel-item">Histoire du littoral de Royan</div>
-      	<div class="materiel-item">Ressources sur les marais atlantiques</div>
-      	<div class="materiel-item">Liens avec associations environnementales</div>
-    	</div>
-   	 
-    	<h3>Variantes pédagogiques :</h3>
-    	<textarea id="variantes" name="variantes">- Version scolaire : Intégration aux programmes SVT/Géographie
-- Version familiale : Activités simplifiées pour jeunes enfants
-- Version crépusculaire : Exploration nocturne du marais
-- Version approfondie : Analyse scientifique des écosystèmes</textarea>
   	</div>
 	</form>
   </div>
